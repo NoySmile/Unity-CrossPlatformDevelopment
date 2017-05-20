@@ -1,6 +1,4 @@
-﻿using System;
-using RPGStats;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu]
 public class Stat : ScriptableObject

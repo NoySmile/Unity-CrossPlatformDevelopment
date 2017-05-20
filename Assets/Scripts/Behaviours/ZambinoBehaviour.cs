@@ -11,7 +11,7 @@ public class ZambinoBehaviour : CharacterBehaviour
         PlayerGameObject = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
     }
-    [InspectorReadOnly]
+    [SerializeField]
     float distance;
 
     

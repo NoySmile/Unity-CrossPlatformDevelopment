@@ -11,3 +11,8 @@ public class ItemFactoryAttribute : PropertyAttribute
 {
     
 }
+
+public class StatStringAttribute : PropertyAttribute
+{
+    
+}

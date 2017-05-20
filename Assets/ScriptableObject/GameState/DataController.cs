@@ -28,36 +28,29 @@ public class ScriptableSingleton<T> : ScriptableObject where T : ScriptableObjec
 [CreateAssetMenu]
 public class DataController : ScriptableSingleton<DataController>
 {
-    private static string path;
     private static int numsaves = 0;
+    private static readonly string path = Application.dataPath + "/StreamingAssets/";
     public static void Save<T>(T data, string profilename = "") where T : ScriptableObject
     {        
-        path = Application.dataPath + "/StreamingAssets/";
-        var files = System.IO.Directory.GetFiles(path, "*.json").ToList();
+        var files = Directory.GetFiles(path, "*.json").ToList();
         numsaves = files.Count;
         //object to json string
         var json = JsonUtility.ToJson(data, true);
         //filename to save
-        var savename = data.GetType().ToString();
-        if (profilename != "")
-            savename = profilename;
-        
+        var savename = (profilename != "") ? data.GetType().ToString() : profilename;
         var filename = string.Format("{0}-{1}.json", savename, numsaves);
         //write all text to the file at the path
         File.WriteAllText(path + filename, json);
-        numsaves++;
-        Debug.LogFormat("save {0} with filename {1}", data, filename);
+        Debug.LogFormat(@"<color=cyan>save {0} with filename {1}</color>", data, filename);
     }
-
+    
     public static T Load<T>(string filename) where T : ScriptableObject
     {
-        path = Application.dataPath + "/StreamingAssets/";
         var json = File.ReadAllText(path + filename+".json");
-        var scriptableObject = ScriptableObject.CreateInstance<T>();
-        JsonUtility.FromJsonOverwrite(json, scriptableObject);
-        if (scriptableObject == null)
-            Debug.Log("could not load requested file");
-        return scriptableObject;
+        var data = CreateInstance<T>();
+        JsonUtility.FromJsonOverwrite(json, data);
+        Debug.LogFormat(@"<color=green>load {0} with filename {1}</color>", data, filename);
+        return data;
     }
 
 }
