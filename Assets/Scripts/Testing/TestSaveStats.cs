@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 using Random = UnityEngine.Random;
 using System.Linq;
@@ -12,13 +14,30 @@ public class TestSaveStats : MonoBehaviour
     
     public StatsValue stats_Value;
 
-    [SerializeField]
+    /// <summary>
+    /// comes from inspector
+    /// </summary>
+    [SerializeField] public Stats config;
+    
+    /// <summary>
+    /// list of stat to use as this configuration
+    /// </summary>
     private List<Stat> stats_config;
-
+    /// <summary>
+    /// the runtime list of stats
+    /// </summary>
     private List<Stat> stats_runtime;
 
+    /// <summary>
+    /// for anyone to view
+    /// </summary>
+    public List<Stat> Stats
+    { get { return stats_runtime; } }
+    /// <summary>
+    /// the runtime Stats object
+    /// </summary>
     private Stats stats;
-
+    
     [Serializable]
     public class StatsValue
     {
@@ -49,7 +68,8 @@ public class TestSaveStats : MonoBehaviour
     private void Start()
     {
         stats_runtime = new List<Stat>();
-
+        stats_config = new List<Stat>();
+        stats_config.AddRange(config.StatsArray);
         foreach(var stat in stats_config)
         {
             var clone = Instantiate(stat);
@@ -63,7 +83,14 @@ public class TestSaveStats : MonoBehaviour
         stats = ScriptableObject.CreateInstance<Stats>();
 
         foreach (var stat in stats_Value.stats)
+        {
             stats.Add(stat);
+            GameState.Instance.EVENT_PLAYERSTATCHANGE.Invoke(stat);
+        }
+
+        if(File.Exists(Application.persistentDataPath + "/player-stats.json"))
+            Load();
+
     }
 
     public void Clear()
@@ -82,8 +109,12 @@ public class TestSaveStats : MonoBehaviour
 
         stats = ScriptableObject.CreateInstance<Stats>();
 
-        foreach(var stat in stats_Value.stats)
+        foreach (var stat in stats_Value.stats)
+        {
+            GameState.Instance.EVENT_PLAYERSTATCHANGE.Invoke(stat);
             stats.Add(stat);
+        }
+            
     }
     //save the runtime data to file
     public void Save()
@@ -91,8 +122,12 @@ public class TestSaveStats : MonoBehaviour
         path = Application.persistentDataPath + "/player-stats.json";
         stats_Value.Stats = stats_runtime;
         stats = ScriptableObject.CreateInstance<Stats>();
-        foreach(var stat in stats_Value.stats)
+        foreach (var stat in stats_Value.stats)
+        {
             stats.Add(stat);
+            GameState.Instance.EVENT_PLAYERSTATCHANGE.Invoke(stat);
+        }
+            
 
         var json = JsonUtility.ToJson(stats_Value, true);
         File.WriteAllText(path, json);
@@ -127,12 +162,17 @@ public class TestSaveStats : MonoBehaviour
 
         stats_Value = new StatsValue { Stats = stats_runtime };
         stats = ScriptableObject.CreateInstance<Stats>();
-        foreach(var stat in stats_Value.stats)
+        foreach (var stat in stats_Value.stats)
+        {
             stats.Add(stat);
+            GameState.Instance.EVENT_PLAYERSTATCHANGE.Invoke(stat);
+        }
+            
     }
 
     private int modnum = 0;
-    private void Modify()
+
+    public void Modify()
     {
         foreach(var s in stats_runtime)
         {
@@ -142,40 +182,4 @@ public class TestSaveStats : MonoBehaviour
         }
     }
 
-    [CustomEditor(typeof(TestSaveStats))]
-    public class InspectorTestSave : Editor
-    {
-        private List<string> statnames;
-
-        private void OnEnable()
-        {
-            statnames = new List<string>();
-            var stats = Resources.FindObjectsOfTypeAll<Stat>().ToList();
-            foreach (var s in stats)
-                statnames.Add(s.name);
-        }
-
-        private int selected = 0;
-        public override void OnInspectorGUI()
-        {
-            var mt = target as TestSaveStats;
-            if(GUILayout.Button("Save"))
-                if(mt != null) mt.Save();
-            if(GUILayout.Button("Load"))
-                if(mt != null) mt.Load();
-            if(GUILayout.Button("Clear"))
-                if(mt != null) mt.Clear();
-            if(GUILayout.Button("Modify"))
-                if(mt != null) mt.Modify();
-            if (mt != null && (mt.stats_runtime != null && mt.stats_runtime.Count > 0))
-            {
-                foreach(var s in mt.stats_runtime)
-                    EditorGUILayout.LabelField(s.Name, s.Value.ToString());
-            }
-
-            selected = EditorGUILayout.Popup("Stats", selected, statnames.ToArray());
-
-            base.OnInspectorGUI();
-        }
-    }
 }

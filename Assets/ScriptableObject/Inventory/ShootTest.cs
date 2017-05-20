@@ -5,7 +5,6 @@ using System.Linq;
 
 public class ShootTest : MonoBehaviour
 {
-    public int Health;
     public List<Item> inspectorWeapons;
     public List<Item> weapons;
     int weaponindex = 1;

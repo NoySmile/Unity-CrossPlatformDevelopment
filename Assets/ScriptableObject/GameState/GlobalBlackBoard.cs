@@ -7,13 +7,9 @@ using UnityEngine.Events;
 [CreateAssetMenu(menuName ="GLOBALS/GlobalBlackBoard")]
 public class GlobalBlackBoard : ScriptableObject
 {
-    
     private static GlobalBlackBoard _instance;
 
-    public class GameStartedEvent : UnityEvent
-    {
-        
-    } 
+    public class GameStartedEvent : UnityEvent{} 
 
     public static GlobalBlackBoard Instance
     {

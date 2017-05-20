@@ -29,9 +29,9 @@ public class ScriptableSingleton<T> : ScriptableObject where T : ScriptableObjec
 public class DataController : ScriptableSingleton<DataController>
 {
     private static int numsaves = 0;
-    private static readonly string path = Application.dataPath + "/StreamingAssets/";
     public static void Save<T>(T data, string profilename = "") where T : ScriptableObject
-    {        
+    {
+        string path = Application.dataPath + "/StreamingAssets/";
         var files = Directory.GetFiles(path, "*.json").ToList();
         numsaves = files.Count;
         //object to json string
@@ -46,6 +46,7 @@ public class DataController : ScriptableSingleton<DataController>
     
     public static T Load<T>(string filename) where T : ScriptableObject
     {
+        string path = Application.dataPath + "/StreamingAssets/";
         var json = File.ReadAllText(path + filename+".json");
         var data = CreateInstance<T>();
         JsonUtility.FromJsonOverwrite(json, data);

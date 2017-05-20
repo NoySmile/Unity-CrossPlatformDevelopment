@@ -2258,7 +2258,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab7cffb7cce7cb4cbd58796ba092bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 0
   inspectorWeapons:
   - {fileID: 11400000, guid: c8e5241122006d5459357c59950ce3e0, type: 2}
   - {fileID: 11400000, guid: fd7988ee97432e041b6f164ebf62b9cd, type: 2}
@@ -2668,6 +2667,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: CharacterBehaviour+OnStatModify, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  stats_Value:
+    Count: 0
+    names: []
+    stats: []
+    values: 
 --- !u!114 &114640116097104660
 MonoBehaviour:
   m_ObjectHideFlags: 1

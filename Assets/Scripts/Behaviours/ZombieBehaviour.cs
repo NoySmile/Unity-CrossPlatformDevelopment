@@ -21,7 +21,7 @@ public class ZombieBehaviour : CharacterBehaviour
             CharacterStats = Resources.Load<Stats>(@"Stats\PlayerStats");
         }
 
-        GameState.Instance._player = new GameState.PlayerInfo(CharacterStats) { Name = name };
+        
     }    
 
     void Start()

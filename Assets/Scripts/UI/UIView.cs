@@ -18,9 +18,9 @@ public class UIView : MonoBehaviour
 
     public GameObject Root;
 
-    private List<GameObject> ui_items;
+    public List<GameObject> ui_items;
     public Slider HealthSlider;
-    private void Awake()
+    private void Start()
     {
         if (ui_items == null) return;
         if (ui_items.Count > 0) ui_items.ForEach(go => go.SetActive(false));

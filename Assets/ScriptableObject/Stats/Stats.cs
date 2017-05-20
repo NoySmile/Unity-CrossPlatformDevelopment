@@ -3,9 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
 [CreateAssetMenu(menuName = "Stats")]
 public class Stats : ScriptableObject, IEnumerable<Stat>
@@ -57,15 +54,18 @@ public class Stats : ScriptableObject, IEnumerable<Stat>
             Modifiers[id].value);
 
         Items[m.stat].Apply(m);
+        GameState.Instance.EVENT_PLAYERSTATCHANGE.Invoke(Items[m.stat]);
         return result;
     }
 
     public string RemoveModifier(int id)
     {
-        var result = string.Format("Remove modifier {0} {1} {2}", Modifiers[id].stat, Modifiers[id].type,
+        string statname = Modifiers[id].stat;
+        var result = string.Format("Remove modifier {0} {1} {2}", statname, Modifiers[id].type,
             Modifiers[id].value);
         Items[Modifiers[id].stat].Remove(Modifiers[id]);
         Modifiers.Remove(id);
+        GameState.Instance.EVENT_PLAYERSTATCHANGE.Invoke(Items[statname]);
         return result;
     }
 
@@ -73,6 +73,7 @@ public class Stats : ScriptableObject, IEnumerable<Stat>
     {
         s.Name = s.Name.Replace("(Clone)", string.Empty);
         Items.Add(s.Name, s);
+        GameState.Instance.EVENT_PLAYERSTATCHANGE.Invoke(Items[s.Name]);
     }
 
     public void ClearModifiers()

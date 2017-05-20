@@ -6,10 +6,18 @@ public class TestTextUpdateStats : MonoBehaviour
 {
     public Stat stat;
     private UnityEngine.UI.Text text;
-
+    private void OnDisable()
+    {
+        GameState.Instance.EVENT_PLAYERSTATCHANGE.RemoveListener(SetText);
+    }
+    private void Awake()
+    {  text = GetComponent<UnityEngine.UI.Text>();
+        GameState.Instance.EVENT_PLAYERSTATCHANGE.AddListener(SetText);
+    }
     private void Start()
     {
-        text = GetComponent<UnityEngine.UI.Text>();
+      
+        
     }
 
     void SetText(Stat s)

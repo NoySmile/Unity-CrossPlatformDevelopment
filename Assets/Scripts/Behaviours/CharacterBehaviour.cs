@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public abstract class CharacterBehaviour : MonoBehaviour
 {
     [Serializable]
-    public class OnStatModify : UnityEvent<string> { }
+    public class OnStatModify : UnityEvent<Stat> { }
 
 
     [Serializable]

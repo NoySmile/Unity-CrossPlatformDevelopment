@@ -48,6 +48,12 @@ public class UIController : MonoBehaviour
         onStart.Invoke();
         var ui_gridbehaviour = View.InventoryGrid.GetComponent<UIGridBehaviour>();
         backPackBehaviour.onBackPackChange.AddListener(ui_gridbehaviour.SetItems);
+        
+
+    }
+
+    void InitDrops()
+    {
         var allitems = Resources.LoadAll<Item>("Items");
         var names = allitems.Select(t => t._itemName).ToList();
         itemDropdownList.ClearOptions();
@@ -67,7 +73,6 @@ public class UIController : MonoBehaviour
         _dropdowns = new List<Dropdown>() { itemDropdownList, savesDropdownList };
         _dropdowns.ForEach(d => d.gameObject.SetActive(false));
         onStartButton.Invoke();
-
     }
 
     private void Update()
