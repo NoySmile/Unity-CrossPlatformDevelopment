@@ -4993,6 +4993,7 @@ MonoBehaviour:
   NPC: {fileID: 1254199903583664}
   PlayerChoices: {fileID: 1138951099741592}
   Root: {fileID: 1103039045417682}
+  ui_items: []
   HealthSlider: {fileID: 114345749043032688}
 --- !u!114 &114516086452097246
 MonoBehaviour:

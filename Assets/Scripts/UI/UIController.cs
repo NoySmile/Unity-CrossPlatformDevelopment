@@ -38,6 +38,7 @@ public class UIController : MonoBehaviour
     Button save_button, load_button, clear_button;
     List<Button> _buttons;
     List<Dropdown> _dropdowns;
+
     private void Awake()
     {
         View = FindObjectOfType<UIView>();
@@ -48,8 +49,6 @@ public class UIController : MonoBehaviour
         onStart.Invoke();
         var ui_gridbehaviour = View.InventoryGrid.GetComponent<UIGridBehaviour>();
         backPackBehaviour.onBackPackChange.AddListener(ui_gridbehaviour.SetItems);
-        
-
     }
 
     void InitDrops()

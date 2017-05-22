@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using RPGStats;
 using UnityEngine;
-using System.Linq;
+
 public class PlayerBehaviour : CharacterBehaviour
 {
     private string path;
@@ -27,33 +27,6 @@ public class PlayerBehaviour : CharacterBehaviour
     /// the runtime Stats object
     /// </summary>
     private Stats stats;
-
-    [Serializable]
-    public class StatsValue
-    {
-        public int Count;
-        public List<string> names;
-        public List<Stat> stats;
-        public List<int> values;
-
-        public List<Stat> Stats
-        {
-            get { return stats; }
-            set
-            {
-                stats = value;
-                values = new List<int>();
-                names = new List<string>();
-                foreach(var t in stats)
-                {
-                    values.Add(t.Value);
-                    names.Add(t.Name);
-                }
-
-                Count = stats.Count;
-            }
-        }
-    }
 
     private void Start()
     {
@@ -167,23 +140,39 @@ public class PlayerBehaviour : CharacterBehaviour
 
     public override void ModifyStat(Stat stat, RPGStats.Modifier mod)
     {
-        if (!base.CharacterStats.GetStat(stat.Name))
+        if (!CharacterStats[stat.Name])
         {
             Debug.LogWarningFormat("stat:: {0}, is not a valid stat to modify", stat);
             return;
         }
 
-        base.CharacterStats.AddModifier(modcount++, mod);
+        CharacterStats.AddModifier(modcount++, mod);
 
         if (stat.Name == "Health")
-            onHealthChange.Invoke(base.CharacterStats[stat.Name].Value);
+            onHealthChange.Invoke(CharacterStats[stat.Name].Value);
         onStatModify.Invoke(stat);
         GameState.Instance.EVENT_PLAYERSTATCHANGE.Invoke(stat);
     }
 
-    public void ClearAll()
+    public override void RemoveModifier(int id)
     {
-        base.CharacterStats.ClearModifiers();
+        CharacterStats.RemoveModifier(id);
     }
-    
+
+    public override void ModifyStat(int id, Stat stat, RPGStats.Modifier mod)
+    {
+        if(!CharacterStats[stat.Name])
+        {
+            Debug.LogWarningFormat("stat:: {0}, is not a valid stat to modify", stat);
+            return;
+        }
+
+        CharacterStats.AddModifier(id, mod);
+        
+        if(stat.Name == "Health")
+            onHealthChange.Invoke(CharacterStats[stat.Name].Value);
+        onStatModify.Invoke(CharacterStats[stat.Name]);
+        GameState.Instance.EVENT_PLAYERSTATCHANGE.Invoke(CharacterStats[stat.Name]);
+    }
+
 }

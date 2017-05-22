@@ -7,41 +7,19 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Stats")]
 public class Stats : ScriptableObject, IEnumerable<Stat>
 {
-    public Dictionary<string, Stat> Items = new Dictionary<string, Stat>();
-    public Dictionary<int, RPGStats.Modifier> Modifiers = new Dictionary<int, RPGStats.Modifier>();
+    private Dictionary<string, Stat> Items = new Dictionary<string, Stat>();
+    private Dictionary<int, RPGStats.Modifier> Modifiers = new Dictionary<int, RPGStats.Modifier>();
     public Stat[] StatsArray;
     
-    public Stat this[string element]
-    {
-        get
-        {
-            return Items.ContainsKey(element) ? Items[element] : null;
-        }
-
-        set { Items[element] = value; }
-    }
-
-    public int Count
-    {
-        get { return StatsArray.Length; }
-    }
-
-    public IEnumerator<Stat> GetEnumerator()
-    {
-        return Items.Values.GetEnumerator();
-    }
-
-    IEnumerator IEnumerable.GetEnumerator()
-    {
-        return Items.Values.GetEnumerator();
-    }
-
     private void OnEnable()
     {
         if (StatsArray == null) return;
 
         foreach (var stat in StatsArray)
-            Add(Instantiate(stat));
+        {
+            var s = Instantiate(stat);
+            Add(s);
+        }
     }
 
     public string AddModifier(int id, RPGStats.Modifier m)
@@ -71,7 +49,7 @@ public class Stats : ScriptableObject, IEnumerable<Stat>
 
     public void Add(Stat s)
     {
-        s.Name = s.Name.Replace("(Clone)", string.Empty);
+        UnityEngine.Assertions.Assert.IsFalse(s.name.Contains("Clone"), "name has clone..this will not work well with the dictionaries");
         Items.Add(s.Name, s);
         GameState.Instance.EVENT_PLAYERSTATCHANGE.Invoke(Items[s.Name]);
     }
@@ -85,15 +63,32 @@ public class Stats : ScriptableObject, IEnumerable<Stat>
         Modifiers.Clear();
     }
 
-    public Stat GetStat(string key)
+    public Stat this[string element]
     {
-        return Items[key];
+        get
+        {
+            var item = Items.ContainsKey(element) ? Items[element] : null;
+            if (item == null)
+                Debug.Log("tried to fetch " + element);
+            return item;
+        }
+
+        set { Items[element] = value; }
     }
 
-    [Serializable]
-    public class IDModifier
+    public int Count
     {
-        public int identifier;
-        public RPGStats.Modifier mod;
+        get { return StatsArray.Length; }
     }
+
+    public IEnumerator<Stat> GetEnumerator()
+    {
+        return Items.Values.GetEnumerator();
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return Items.Values.GetEnumerator();
+    }
+
 }

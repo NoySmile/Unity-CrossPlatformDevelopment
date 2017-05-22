@@ -4,6 +4,10 @@ using UnityEngine;
 [Serializable]
 public abstract class Item : ScriptableObject, IExecutable
 {
+    public virtual void SetOwner(CharacterBehaviour cb)
+    {
+        _owner = cb.gameObject;
+    }
     protected int _itemID;
     public string _itemName;
     protected bool _initialized;

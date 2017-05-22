@@ -1,9 +1,73 @@
 fileFormatVersion: 2
 guid: e49c05ee4a3dbf44698eb25f94288743
-timeCreated: 1493508928
+timeCreated: 1495319892
 licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: LunkWalkCycle_0
+    21300002: LunkWalkCycle_1
+    21300004: LunkWalkCycle_2
+    21300006: LunkWalkCycle_3
+    21300008: LunkWalkCycle_4
+    21300010: LunkWalkCycle_5
+    21300012: LunkWalkCycle_6
+    21300014: LunkWalkCycle_7
+    21300016: LunkWalkCycle_8
+    21300018: LunkWalkCycle_9
+    21300020: LunkWalkCycle_10
+    21300022: LunkWalkCycle_11
+    21300024: LunkWalkCycle_12
+    21300026: LunkWalkCycle_13
+    21300028: LunkWalkCycle_14
+    21300030: LunkWalkCycle_15
+    21300032: LunkWalkCycle_16
+    21300034: LunkWalkCycle_17
+    21300036: LunkWalkCycle_18
+    21300038: LunkWalkCycle_19
+    21300040: LunkWalkCycle_20
+    21300042: LunkWalkCycle_21
+    21300044: LunkWalkCycle_22
+    21300046: LunkWalkCycle_23
+    21300048: LunkWalkCycle_24
+    21300050: LunkWalkCycle_25
+    21300052: LunkWalkCycle_26
+    21300054: LunkWalkCycle_27
+    21300056: LunkWalkCycle_28
+    21300058: LunkWalkCycle_29
+    21300060: LunkWalkCycle_30
+    21300062: LunkWalkCycle_31
+    21300064: LunkWalkCycle_32
+    21300066: LunkWalkCycle_33
+    21300068: LunkWalkCycle_34
+    21300070: LunkWalkCycle_35
+    21300072: LunkWalkCycle_36
+    21300074: LunkWalkCycle_37
+    21300076: LunkWalkCycle_38
+    21300078: LunkWalkCycle_39
+    21300080: LunkWalkCycle_40
+    21300082: LunkWalkCycle_41
+    21300084: LunkWalkCycle_42
+    21300086: LunkWalkCycle_43
+    21300088: LunkWalkCycle_44
+    21300090: LunkWalkCycle_45
+    21300092: LunkWalkCycle_46
+    21300094: LunkWalkCycle_47
+    21300096: LunkWalkCycle_48
+    21300098: LunkWalkCycle_49
+    21300100: LunkWalkCycle_50
+    21300102: LunkWalkCycle_51
+    21300104: LunkWalkCycle_52
+    21300106: LunkWalkCycle_53
+    21300108: LunkWalkCycle_54
+    21300110: LunkWalkCycle_55
+    21300112: LunkWalkCycle_56
+    21300114: LunkWalkCycle_57
+    21300116: LunkWalkCycle_58
+    21300118: LunkWalkCycle_59
+    21300120: LunkWalkCycle_60
+    21300122: LunkWalkCycle_61
+    21300124: LunkWalkCycle_62
+    21300126: LunkWalkCycle_63
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -34,7 +98,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -84,7 +148,839 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: LunkWalkCycle_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 916
+        width: 64
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 912
+        width: 62
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 912
+        width: 62
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_3
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 914
+        width: 62
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_4
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 916
+        width: 63
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_5
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 915
+        width: 64
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_6
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 913
+        width: 63
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_7
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 912
+        width: 64
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_8
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 793
+        width: 65
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_9
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 793
+        width: 66
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_10
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 799
+        width: 74
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_11
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 791
+        width: 72
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_12
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 793
+        width: 64
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_13
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 794
+        width: 67
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_14
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 796
+        width: 74
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_15
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 788
+        width: 74
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_16
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 665
+        width: 64
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_17
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 665
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_18
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 671
+        width: 74
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_19
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 663
+        width: 72
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_20
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 665
+        width: 64
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_21
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 666
+        width: 64
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_22
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 668
+        width: 74
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_23
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 660
+        width: 72
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_24
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 536
+        width: 59
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_25
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 539
+        width: 63
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_26
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 540
+        width: 61
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_27
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 541
+        width: 64
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_28
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 536
+        width: 59
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_29
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 536
+        width: 60
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_30
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 542
+        width: 62
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_31
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 540
+        width: 61
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_32
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 406
+        width: 62
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_33
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 401
+        width: 64
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_34
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 400
+        width: 64
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_35
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 401
+        width: 65
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_36
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 406
+        width: 64
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_37
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 402
+        width: 64
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_38
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 400
+        width: 62
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_39
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 401
+        width: 64
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_40
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 281
+        width: 65
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_41
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 280
+        width: 65
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_42
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 286
+        width: 74
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_43
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 279
+        width: 72
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_44
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 281
+        width: 65
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_45
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 281
+        width: 67
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_46
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 284
+        width: 76
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_47
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 276
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_48
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 151
+        width: 64
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_49
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 151
+        width: 66
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_50
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 157
+        width: 74
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_51
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 150
+        width: 72
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_52
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 151
+        width: 66
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_53
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 152
+        width: 66
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_54
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 156
+        width: 74
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_55
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 147
+        width: 72
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_56
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 24
+        width: 62
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_57
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 27
+        width: 63
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_58
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 29
+        width: 68
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_59
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 28
+        width: 64
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_60
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 24
+        width: 59
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_61
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 27
+        width: 63
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_62
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 30
+        width: 65
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LunkWalkCycle_63
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 29
+        width: 63
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 

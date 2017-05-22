@@ -9,8 +9,10 @@ public class Stat : ScriptableObject
     public int Value;
     private void OnEnable()
     {
+        name = name.Contains("(Clone)") ? name.Replace("(Clone)", string.Empty) : name;
         Name = name;
         Value = _baseValue;
+        
     }
 
     public void Apply(RPGStats.Modifier mod)

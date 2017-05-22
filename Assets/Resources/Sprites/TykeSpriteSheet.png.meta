@@ -1,9 +1,25 @@
 fileFormatVersion: 2
 guid: c0b0f40372ec8244284140280a50d8da
-timeCreated: 1493502408
+timeCreated: 1495319914
 licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: TykeSpriteSheet_0
+    21300002: TykeSpriteSheet_1
+    21300004: TykeSpriteSheet_2
+    21300006: TykeSpriteSheet_3
+    21300008: TykeSpriteSheet_4
+    21300010: TykeSpriteSheet_5
+    21300012: TykeSpriteSheet_6
+    21300014: TykeSpriteSheet_7
+    21300016: TykeSpriteSheet_8
+    21300018: TykeSpriteSheet_9
+    21300020: TykeSpriteSheet_10
+    21300022: TykeSpriteSheet_11
+    21300024: TykeSpriteSheet_12
+    21300026: TykeSpriteSheet_13
+    21300028: TykeSpriteSheet_14
+    21300030: TykeSpriteSheet_15
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -84,7 +100,215 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: TykeSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 474
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TykeSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 474
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TykeSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 474
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TykeSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 474
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TykeSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 432
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TykeSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 433
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TykeSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 432
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TykeSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 433
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TykeSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 390
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TykeSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 391
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TykeSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 390
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TykeSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 391
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TykeSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 347
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TykeSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 348
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TykeSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 347
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TykeSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 348
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 

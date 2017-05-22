@@ -4,7 +4,11 @@ public class PlayerInput : MonoBehaviour
 {
     public static Vector2 LeftStick
     {
-        get { return new Vector2(Input.GetAxis(Strings.LEFTHORIZONTAL), Input.GetAxis(Strings.LEFTVERTICAL)); }
+        get
+        {
+            return new Vector2(Input.GetAxis(Strings.LEFTHORIZONTAL),
+                Input.GetAxis(Strings.LEFTVERTICAL));
+        }
     }
 
     public static Vector2 RightStick
@@ -20,6 +24,7 @@ public class PlayerInput : MonoBehaviour
     {
         get { return Input.GetButtonDown(Strings.XBOX_Y); }
     }
+
     public static bool isInputBlock
     {
         get { return Input.GetButton(Strings.LEFTBUMPER); }
@@ -27,10 +32,9 @@ public class PlayerInput : MonoBehaviour
 
     public static bool isInputSwap
     {
-        get;set;
+        get; set;
     }
 
-    
     public static bool isInputCrouch
     {
         get { return Input.GetAxis(Strings.LEFTVERTICAL) < 0; }

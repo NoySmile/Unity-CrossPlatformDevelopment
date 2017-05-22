@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Vitality
   m_EditorClassIdentifier: 
   _baseValue: 10
-  Name: 
-  Value: 0
+  Name: Vitality
+  Value: 10

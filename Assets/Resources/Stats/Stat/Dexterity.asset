@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Dexterity
   m_EditorClassIdentifier: 
   _baseValue: 10
-  Name: 
-  Value: 0
+  Name: Dexterity
+  Value: 10

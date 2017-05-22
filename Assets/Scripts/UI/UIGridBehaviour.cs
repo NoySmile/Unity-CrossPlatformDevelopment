@@ -42,12 +42,20 @@ public class UIGridBehaviour : MonoBehaviour
         var newtotal = numItems + 1;
         if (newtotal > Capacity)
             return;
-        var itemgo = new GameObject("Item", typeof(Image), typeof(Selectable));
+        var itemgo = new GameObject("Item", typeof(Image), typeof(Button));
         ui_items.Add(itemgo);
         itemgo.transform.SetParent(children[itemIndex]);
         itemgo.GetComponent<RectTransform>().Stretch();
         itemgo.GetComponent<Image>().sprite = item.ItemSprite;
+        itemgo.GetComponent<Button>().onClick.AddListener(delegate
+        {
+            var equip = item as IEquippable;
+            Debug.Log("clicked " + item);
+            if (equip != null) equip.Equip();
+        });
+        
         numItems++;
         itemIndex++;
+        
     }
 }

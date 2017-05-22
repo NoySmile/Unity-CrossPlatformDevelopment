@@ -14,13 +14,18 @@ public class HealthPotion : Potion
         modifier.Initialize(obj);
     }
 
+    public bool consumed;
     public override void Execute()
     {        
         this.Consume(this._owner);
     }
+
     public override void Consume(GameObject owner)
     {
-        owner.GetComponent<CharacterBehaviour>().ModifyStat(modifier.EffectedStat, modifier.mod);
+        if(consumed) return;
+        var characterBehaviour = owner.GetComponent<CharacterBehaviour>();
+        characterBehaviour.ModifyStat(modifier.EffectedStat, modifier.mod);
+        consumed = true;
     }
     
 }

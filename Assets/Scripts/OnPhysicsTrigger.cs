@@ -51,7 +51,6 @@ public class OnPhysicsTrigger : MonoBehaviour
             onExitCollision.Invoke(collision.gameObject);
     }
 
-
     [Serializable]
     public class OnStart : UnityEvent { }
 
