@@ -22,8 +22,8 @@ public class UIView : MonoBehaviour
     public Slider HealthSlider;
     private void Start()
     {
-        if (ui_items == null) return;
-        if (ui_items.Count > 0) ui_items.ForEach(go => go.SetActive(false));
+       // if (ui_items == null) return;
+       // if (ui_items.Count > 0) ui_items.ForEach(go => go.SetActive(false));
     }
  
 }

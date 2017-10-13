@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName ="Items/Potions/HealthPotions")]
+[CreateAssetMenu(menuName = "Scriptables/Items/Potions/HealthPotions")]
 public class HealthPotion : Potion
 {
     public Modifier modifier;

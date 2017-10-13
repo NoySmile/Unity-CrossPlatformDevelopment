@@ -2,7 +2,7 @@
 
 namespace ScriptableAssets
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName = "Scriptables/Unit")]
     public class Unit : ScriptableObject
     {
         [HideInInspector] public Stats _stats;

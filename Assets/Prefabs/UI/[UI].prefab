@@ -2252,7 +2252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f12683b42c90041a0c3d6129537e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layout: {fileID: 0}
   step: 5
   up: 0
 --- !u!114 &114033092367933772
@@ -2517,6 +2516,9 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
+  m_TotalMinSize: {x: 0, y: 0}
+  m_TotalPreferredSize: {x: 0, y: 0}
+  m_TotalFlexibleSize: {x: 0, y: 0}
   fDistance: 42.5
   MinAngle: 0
   MaxAngle: 360
@@ -4378,6 +4380,7 @@ MonoBehaviour:
   m_PreferredHeight: 48
   m_FlexibleWidth: 1
   m_FlexibleHeight: 1
+  m_LayoutPriority: 1
 --- !u!114 &114381335082133250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5321,6 +5324,7 @@ MonoBehaviour:
   m_PreferredHeight: 48
   m_FlexibleWidth: 1
   m_FlexibleHeight: 1
+  m_LayoutPriority: 1
 --- !u!114 &114578002484665556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6191,6 +6195,7 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &114802659670825046
 MonoBehaviour:
   m_ObjectHideFlags: 1

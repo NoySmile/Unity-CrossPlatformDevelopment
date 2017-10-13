@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Items/CombatKnife")]
+[CreateAssetMenu(menuName = "Scriptables/Items/CombatKnife")]
 public class CombatKnife : Weapon
 {
     public override void Execute()

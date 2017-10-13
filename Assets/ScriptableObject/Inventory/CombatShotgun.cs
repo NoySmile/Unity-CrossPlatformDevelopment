@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "Items/ShotGun")]
+[CreateAssetMenu(menuName = "Scriptables/Items/ShotGun")]
 public class CombatShotgun : Weapon, IShootable
 {
     readonly int numPellets = 5;

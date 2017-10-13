@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 #if UNITY_EDITOR
-using UnityEditor;
 #endif
 using UnityEngine;
 using Random = UnityEngine.Random;
-using System.Linq;
 
 public class TestSaveStats : MonoBehaviour
 {
@@ -120,7 +118,7 @@ public class TestSaveStats : MonoBehaviour
     public void Save()
     {
         path = Application.persistentDataPath + "/player-stats.json";
-        stats_Value.Stats = stats_runtime;
+         stats_Value.Stats = stats_runtime;
         stats = ScriptableObject.CreateInstance<Stats>();
         foreach (var stat in stats_Value.stats)
         {
@@ -170,7 +168,7 @@ public class TestSaveStats : MonoBehaviour
             
     }
 
-    private int modnum = 0;
+    private int modnum;
 
     public void Modify()
     {

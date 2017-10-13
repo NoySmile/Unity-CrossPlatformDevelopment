@@ -7,7 +7,7 @@ using UnityEngine.Events;
 using UnityEditor;
 #endif
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName ="Scriptables/GameState")]
 public class GameState : ScriptableSingleton<GameState>
 {
     public class PlayerStatChangeEvent : UnityEvent<Stat> { }

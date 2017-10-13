@@ -1,29 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class TestTextUpdateStats : MonoBehaviour
 {
     public Stat stat;
-    private UnityEngine.UI.Text text;
-    private void OnDisable()
+    Text text;
+
+    void OnDisable()
     {
         GameState.Instance.EVENT_PLAYERSTATCHANGE.RemoveListener(SetText);
     }
-    private void Awake()
-    {  text = GetComponent<UnityEngine.UI.Text>();
+
+    void OnEnable()
+    {
+        text = GetComponent<Text>();
         GameState.Instance.EVENT_PLAYERSTATCHANGE.AddListener(SetText);
     }
-    private void Start()
-    {
-      
-        
-    }
-
     void SetText(Stat s)
     {
         if (s.name == stat.name)
             text.text = s.name + "::" + s.Value;
     }
-
 }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "Modifier")]
+[CreateAssetMenu(menuName = "Scriptables/Modifier")]
 public class Modifier : StatModifier {
 
     public override void Initialize(GameObject go)

@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -11,106 +12,55 @@ using UnityEngine.UI;
 /// </summary>
 public class UIController : MonoBehaviour
 {
-    [SerializeField]
-    private BackPackBehaviour backPackBehaviour;
+    [SerializeField] BackPackBehaviour backPackBehaviour;
 
-    private bool InventoryUp;
+    bool InventoryUp;
 
-    private Vector3 oldInventoryPos;
+    [SerializeField] Dropdown itemDropdownList;
 
-    [HideInInspector]
-    public OnCancel onCancel;
+    Vector3 oldInventoryPos;
 
-    [HideInInspector]
-    public OnStart onStart;
+    [HideInInspector] public OnCancel onCancel;
+
+    [HideInInspector] public OnStart onStart;
 
     public OnStartButton onStartButton;
 
-    [HideInInspector]
-    public OnSubmit onSubmit;
-    [SerializeField]
-    private Dropdown itemDropdownList;
-    [SerializeField]
-    private Dropdown savesDropdownList;
+    [HideInInspector] public OnSubmit onSubmit;
 
-    [SerializeField]
-    private UIView View;
     Button save_button, load_button, clear_button;
-    List<Button> _buttons;
-    List<Dropdown> _dropdowns;
 
-    private void Awake()
+    [SerializeField] Dropdown savesDropdownList;
+
+    [SerializeField] UIView View;
+
+    void Awake()
     {
         View = FindObjectOfType<UIView>();
     }
 
-    private void Start()
+    void Start()
     {
         onStart.Invoke();
         var ui_gridbehaviour = View.InventoryGrid.GetComponent<UIGridBehaviour>();
         backPackBehaviour.onBackPackChange.AddListener(ui_gridbehaviour.SetItems);
     }
 
-    void InitDrops()
+    void Update()
     {
-        var allitems = Resources.LoadAll<Item>("Items");
-        var names = allitems.Select(t => t._itemName).ToList();
-        itemDropdownList.ClearOptions();
-        itemDropdownList.AddOptions(names);
-        itemDropdownList.onValueChanged.AddListener(delegate
-        {
-            var item_text = itemDropdownList.captionText.text;
-            var v = ItemFactory.CreateItem(item_text);
-            backPackBehaviour.AddToPack(v);
-        });
-
-        SetButtonCallbacks();
-        UpdateSavesDropdown();
-
-
-        _buttons.ForEach(b => b.gameObject.SetActive(false));
-        _dropdowns = new List<Dropdown>() { itemDropdownList, savesDropdownList };
-        _dropdowns.ForEach(d => d.gameObject.SetActive(false));
-        onStartButton.Invoke();
+        if (GetCancel()) onCancel.Invoke();
+        if (GetSubmit()) onSubmit.Invoke();
+        if (GetStart()) onStartButton.Invoke();
     }
 
-    private void Update()
-    {
-        if(GetCancel()) onCancel.Invoke();
-        if(GetSubmit()) onSubmit.Invoke();
-        if(GetStart()) onStartButton.Invoke();
-    }
-
-
-    private void SetButtonCallbacks()
-    {
-        save_button = GameObject.Find("Button-Save").GetComponent<Button>();
-        load_button = GameObject.Find("Button-Load").GetComponent<Button>();
-        clear_button = GameObject.Find("Button-Clear").GetComponent<Button>();
-        _buttons = new List<Button>() { save_button, load_button, clear_button };
-        clear_button.onClick.AddListener(delegate { backPackBehaviour.RemoveAll(); });
-
-        save_button.onClick.AddListener(
-            delegate
-            {
-                DataController.Save(backPackBehaviour.backPack_runtime, "BackPack");
-                UpdateSavesDropdown();
-            });
-
-        load_button.onClick.AddListener(delegate
-        {
-            backPackBehaviour.Initialize(DataController.Load<BackPack>(savesDropdownList.captionText.text));
-        });
-        
-    }
 
     public void UpdateSavesDropdown()
     {
         var path = Application.dataPath + "/StreamingAssets/";
-        var files = System.IO.Directory.GetFiles(path, "*.json").ToList();
+        var files = Directory.GetFiles(path, "*.json").ToList();
 
         var names = new List<string>();
-        foreach(var f in files)
+        foreach (var f in files)
         {
             var fname = f.Substring(path.Length);
             var nfname = fname.Remove(fname.Length - ".json".Length);
@@ -123,7 +73,7 @@ public class UIController : MonoBehaviour
 
     public void InventoryToggle()
     {
-        if(!InventoryUp)
+        if (!InventoryUp)
         {
             oldInventoryPos = View.Inventory.transform.localPosition;
             View.Inventory.transform.localPosition = new Vector3(0, 1000f, 0);
@@ -158,14 +108,14 @@ public class UIController : MonoBehaviour
     }
 
     [Serializable]
-    public class OnStart : UnityEvent { }
+    public class OnStart : UnityEvent{}
 
     [Serializable]
-    public class OnCancel : UnityEvent { }
+    public class OnCancel : UnityEvent{}
 
     [Serializable]
-    public class OnSubmit : UnityEvent { }
+    public class OnSubmit : UnityEvent{}
 
     [Serializable]
-    public class OnStartButton : UnityEvent { }
+    public class OnStartButton : UnityEvent{}
 }

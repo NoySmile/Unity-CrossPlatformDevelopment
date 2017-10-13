@@ -8,6 +8,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c51825e98134d74480a4cd685549349, type: 3}
-  m_Name: GameState
+  m_Script: {fileID: 11500000, guid: fb37bc488fcb58d4a8eb96876f4c2a1d, type: 3}
+  m_Name: New Unit
   m_EditorClassIdentifier: 
+  _stats: {fileID: 0}
+  Name: 

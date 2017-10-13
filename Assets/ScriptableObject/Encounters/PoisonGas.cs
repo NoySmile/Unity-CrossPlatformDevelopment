@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Encounter/PoisonGas")]
+[CreateAssetMenu(menuName = "Scriptables/Encounter/PoisonGas")]
 public class PoisonGas : Encounter {
     
     public Material encounterMaterial;

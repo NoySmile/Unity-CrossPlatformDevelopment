@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-[CreateAssetMenu(menuName = "BackPack")]
+[CreateAssetMenu(menuName = "Scriptables/BackPack")]
 public class BackPack : ScriptableObject
 {
     [SerializeField]

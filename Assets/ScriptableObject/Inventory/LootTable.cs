@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-[CreateAssetMenu(menuName = "DropTable")]
+[CreateAssetMenu(menuName = "Scriptables/DropTable")]
 public class LootTable : ScriptableObject
 {
     public List<ItemDrop> ItemDrops = new List<ItemDrop>();

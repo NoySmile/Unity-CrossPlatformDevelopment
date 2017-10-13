@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 [Serializable]
-[CreateAssetMenu(menuName = "Items/KevlarVest")]
+[CreateAssetMenu(menuName = "Scriptables/Items/KevlarVest")]
 public class KevlarVest : Armor
 {
     [SerializeField]
     private Modifier modifier;
-
+    bool equipped = false;
     public override void Initialize(GameObject obj)
     {
         base.Initialize(obj);
@@ -29,6 +29,12 @@ public class KevlarVest : Armor
 
     public override void Equip()
     {
+        if (equipped)
+        {
+            UnEquip();
+            return;
+        }
+            
         base.Equip();
         var characterBehaviour = _owner.GetComponent<CharacterBehaviour>();
         modifier.Initialize(null);
@@ -39,11 +45,18 @@ public class KevlarVest : Armor
             Assert.IsFalse(_itemID == 0);
             characterBehaviour.ModifyStat(_itemID, modifier.EffectedStat, modifier.mod);
         }
+        equipped = true;
         
     }
 
     public override void UnEquip()
     {
+        if (!equipped)
+        {
+            Equip();
+            return;
+        }
+            
         base.Equip();
         var characterBehaviour = _owner.GetComponent<CharacterBehaviour>();
         if(characterBehaviour == null)
@@ -53,6 +66,7 @@ public class KevlarVest : Armor
             Assert.IsFalse(_itemID == 0);
             characterBehaviour.RemoveModifier(_itemID);
         }
+        equipped = false;
     }
 
 }

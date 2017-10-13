@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Items/Shields/Awesome Shield")]
+[CreateAssetMenu(menuName = "Scriptables/Items/Shields/Awesome Shield")]
 public class AwesomeShield : Shield
 {
     public Vector3 MaxScale;

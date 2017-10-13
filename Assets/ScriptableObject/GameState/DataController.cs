@@ -25,7 +25,7 @@ public class ScriptableSingleton<T> : ScriptableObject where T : ScriptableObjec
 /// <summary>
 /// class to track data and save to a location
 /// </summary>
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Scriptables/DataController")]
 public class DataController : ScriptableSingleton<DataController>
 {
     private static int numsaves = 0;

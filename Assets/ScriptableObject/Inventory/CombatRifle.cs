@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "Items/Gun")]
+[CreateAssetMenu(menuName = "Scriptables/Items/Gun")]
 public class CombatRifle : Weapon, IShootable
 {
     public GameObject projectilePrefab;

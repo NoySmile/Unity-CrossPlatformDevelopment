@@ -30,13 +30,14 @@ public class LunkMovementBehaviour : MonoBehaviour
 
     private int loop = 0;
     public bool GameOver = false;
-
+    
     private IEnumerator GameLoop()
     {
+        
         while(!GameOver)
         {
             loop++;
-            yield return StartCoroutine(PlayerLoop());
+            yield return StartCoroutine(PlayerLoop()); 
 
         }
         yield return null;
@@ -90,7 +91,7 @@ public class LunkMovementBehaviour : MonoBehaviour
             while(timer <= total)
             {
                 Camera.main.transform.position = Vector3.Lerp(startpos, endpos, timer / total);
-                yield return timer += Time.deltaTime;
+                yield return timer += Time.deltaTime; ;
             }
 
             cameramove = false;

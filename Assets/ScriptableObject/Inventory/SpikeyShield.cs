@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Spikey Shield", menuName = "Items/Shields/Spikey Shield")]
+[CreateAssetMenu(fileName = "Spikey Shield", menuName = "Scriptables/Items/Shields/Spikey Shield")]
 public class SpikeyShield : Shield
 {
 #pragma warning disable 0649

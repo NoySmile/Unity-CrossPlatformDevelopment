@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Stats")]
+[CreateAssetMenu(menuName = "Scriptables/Stats")]
 public class Stats : ScriptableObject, IEnumerable<Stat>
 {
     private Dictionary<string, Stat> Items = new Dictionary<string, Stat>();
