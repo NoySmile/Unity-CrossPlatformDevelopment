@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+#if UNITY_ANIMA2D
 [CreateAssetMenu(fileName = "Spikey Shield", menuName = "Items/Shields/Spikey Shield")]
 public class SpikeyShield : Shield
 {
@@ -34,3 +34,4 @@ public class SpikeyShield : Shield
 
     public Modifier _StatModifier;
 }
+#endif

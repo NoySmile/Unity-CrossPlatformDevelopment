@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine.EventSystems;
+#if UNITY_UIEXTENSIONS
 using UnityEngine.UI.Extensions;
+
 
 public class ActionChoiceBehaviour : UIBehaviour
 {
@@ -37,3 +39,4 @@ public class ActionChoiceBehaviour : UIBehaviour
         yield return null;
     }
 }
+# endif

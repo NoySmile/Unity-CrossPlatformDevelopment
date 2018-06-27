@@ -16,7 +16,6 @@ namespace AIE
 
             TargetDirection = h * Camera.main.transform.right + v * Camera.main.transform.forward;
 
-
             //before sending it to move we will transform it to camera space
             MovementBehaviour.Move(TargetDirection);
         }
