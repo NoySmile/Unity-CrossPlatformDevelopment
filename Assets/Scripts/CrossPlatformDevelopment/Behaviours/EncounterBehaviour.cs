@@ -1,33 +1,37 @@
-﻿using UnityEngine;
+﻿using CrossPlatformDevelopment.ScriptableObject.Encounters;
+using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
-public class EncounterBehaviour : MonoBehaviour
+namespace CrossPlatformDevelopment.Behaviours
 {
-    public Encounter Encounter;
-
-    //use this for initialization
-    private void Start()
+    [RequireComponent(typeof(Collider2D))]
+    public class EncounterBehaviour : MonoBehaviour
     {
-        Encounter.Initialize(this.gameObject);
-    }
+        public Encounter Encounter;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag != "Player") return;
-        Encounter.EncounterStart();
-        Encounter.EncounterStart(other.gameObject);
-    }
+        //use this for initialization
+        private void Start()
+        {
+            Encounter.Initialize(this.gameObject);
+        }
 
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.tag != "Player") return;
-        Encounter.EncounterUnderway();
-    }
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.tag != "Player") return;
+            Encounter.EncounterStart();
+            Encounter.EncounterStart(other.gameObject);
+        }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.tag != "Player") return;
-        if (!Encounter.Contained) return;
-        Encounter.EncounterEnd();
+        private void OnTriggerStay2D(Collider2D other)
+        {
+            if (other.tag != "Player") return;
+            Encounter.EncounterUnderway();
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.tag != "Player") return;
+            if (!Encounter.Contained) return;
+            Encounter.EncounterEnd();
+        }
     }
 }

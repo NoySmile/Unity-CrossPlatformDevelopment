@@ -1,19 +1,23 @@
-﻿using UnityEngine;
+﻿using CrossPlatformDevelopment.Reuseable;
+using UnityEngine;
 using UnityEngine.UI;
 
-public class AttackChoiceBehaviour : MonoBehaviour
+namespace CrossPlatformDevelopment.Behaviours
 {
-    public GameObject ContentWindow;
-    public GameObject SwordPrefab;
-
-    public void Attack()
+    public class AttackChoiceBehaviour : MonoBehaviour
     {
-        var go = Instantiate(SwordPrefab, ContentWindow.transform);
+        public GameObject ContentWindow;
+        public GameObject SwordPrefab;
 
-        go.AddComponent<DestroyOnTimer>();
-        var sprites = Resources.LoadAll<Sprite>("sword_sprites");
-        var numsprites = sprites.Length;
-        var randomSprite = Random.Range(0, numsprites);
-        go.GetComponent<Image>().sprite = sprites[randomSprite];
+        public void Attack()
+        {
+            var go = Instantiate(SwordPrefab, ContentWindow.transform);
+
+            go.AddComponent<DestroyOnTimer>();
+            var sprites = Resources.LoadAll<Sprite>("sword_sprites");
+            var numsprites = sprites.Length;
+            var randomSprite = Random.Range(0, numsprites);
+            go.GetComponent<Image>().sprite = sprites[randomSprite];
+        }
     }
 }

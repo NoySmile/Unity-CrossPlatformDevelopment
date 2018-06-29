@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
-using System.IO;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine;
 
-public class TestSaveItem : MonoBehaviour
+namespace CrossPlatformDevelopment.Testing
 {
-    public Button SaveButton;
-    public Button LoadButton;
+    public class TestSaveItem : MonoBehaviour
+    {
+        public Button SaveButton;
+        public Button LoadButton;
 
+    }
 }

@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class UIDraggable : UIBehaviour, IDragHandler
+namespace CrossPlatformDevelopment.UI
 {
-    public void OnDrag(PointerEventData eventData)
+    public class UIDraggable : UIBehaviour, IDragHandler
     {
-        var rt = GetComponent<RectTransform>();
-        rt.transform.position += new Vector3(eventData.delta.x, eventData.delta.y, 0);
+        public void OnDrag(PointerEventData eventData)
+        {
+            var rt = GetComponent<RectTransform>();
+            rt.transform.position += new Vector3(eventData.delta.x, eventData.delta.y, 0);
+        }
     }
 }

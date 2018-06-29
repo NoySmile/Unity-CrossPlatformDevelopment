@@ -2,13 +2,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RunChoiceBehaviour : MonoBehaviour
+namespace CrossPlatformDevelopment.Behaviours
 {
-    public Text InformationText;
-
-    public void Run()
+    public class RunChoiceBehaviour : MonoBehaviour
     {
-        const string info = "Run Choice Selected I am running....";
-        InformationText.text += info + Environment.NewLine;
+        public Text InformationText;
+
+        public void Run()
+        {
+            const string info = "Run Choice Selected I am running....";
+            InformationText.text += info + Environment.NewLine;
+        }
     }
 }

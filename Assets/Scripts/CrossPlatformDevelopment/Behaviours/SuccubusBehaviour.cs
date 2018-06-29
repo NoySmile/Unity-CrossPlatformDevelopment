@@ -1,7 +1,10 @@
-﻿using ScriptableAssets;
+﻿using CrossPlatformDevelopment.ScriptableObject.Stats;
 using UnityEngine;
 
-public class SuccubusBehaviour : MonoBehaviour
+namespace CrossPlatformDevelopment.Behaviours
 {
-    public Unit _unit;
+    public class SuccubusBehaviour : MonoBehaviour
+    {
+        public Unit _unit;
+    }
 }

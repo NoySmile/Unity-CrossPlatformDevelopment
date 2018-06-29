@@ -7,7 +7,7 @@
     public static readonly string XBOX_X = "XBOX_X";
     public static readonly string XBOX_Y = "XBOX_Y";
     public static readonly string RIGHTHORIZONTAL = "RightHorizontal";
-    public static readonly string LEFTHORIZONTAL = "LeftHorizontal";
+    public const string LEFTHORIZONTAL = "LeftHorizontal";
     public static readonly string RIGHTVERTICAL = "RightVertical";
     public static readonly string LEFTVERTICAL = "LeftVertical";
     public static readonly string START = "Start";

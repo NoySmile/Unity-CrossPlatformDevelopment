@@ -1,30 +1,33 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class DestroyOnTimer : MonoBehaviour
+namespace CrossPlatformDevelopment.Reuseable
 {
-    public OnDestroyed onDestroyed = new OnDestroyed();
-    public float Time = 1.0f;
-
-    private void OnEnable()
+    public class DestroyOnTimer : MonoBehaviour
     {
-        if (onDestroyed == null) onDestroyed = new OnDestroyed();
-    }
+        public OnDestroyed onDestroyed = new OnDestroyed();
+        public float Time = 1.0f;
 
-    private void Update()
-    {
-        if (Time < 0)
-            Destroy(gameObject);
-        Time -= UnityEngine.Time.deltaTime;
-    }
+        private void OnEnable()
+        {
+            if (onDestroyed == null) onDestroyed = new OnDestroyed();
+        }
 
-    private void OnDestroy()
-    {
-        if (onDestroyed != null)
-            onDestroyed.Invoke(gameObject);
-    }
+        private void Update()
+        {
+            if (Time < 0)
+                Destroy(gameObject);
+            Time -= UnityEngine.Time.deltaTime;
+        }
 
-    public class OnDestroyed : UnityEvent<GameObject>
-    {
+        private void OnDestroy()
+        {
+            if (onDestroyed != null)
+                onDestroyed.Invoke(gameObject);
+        }
+
+        public class OnDestroyed : UnityEvent<GameObject>
+        {
+        }
     }
 }

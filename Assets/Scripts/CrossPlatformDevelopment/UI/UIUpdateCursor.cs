@@ -1,37 +1,40 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class UIUpdateCursor : UIBehaviour
+namespace CrossPlatformDevelopment.UI
 {
-    public GameObject current;
-    private RectTransform rectTransform;
-
-    public GameObject Current
+    public class UIUpdateCursor : UIBehaviour
     {
-        get { return current; }
-        set
+        public GameObject current;
+        private RectTransform rectTransform;
+
+        public GameObject Current
         {
-            current = value;
-            ResetPosition();
+            get { return current; }
+            set
+            {
+                current = value;
+                ResetPosition();
+            }
         }
-    }
 
-    protected override void OnEnable()
-    {
-        rectTransform = GetComponent<RectTransform>();
-    }
+        protected override void OnEnable()
+        {
+            rectTransform = GetComponent<RectTransform>();
+        }
 
-    private void Update()
-    {
-        if (EventSystem.current.currentSelectedGameObject != current)
-            Current = EventSystem.current.currentSelectedGameObject;
-    }
+        private void Update()
+        {
+            if (EventSystem.current.currentSelectedGameObject != current)
+                Current = EventSystem.current.currentSelectedGameObject;
+        }
 
-    private void ResetPosition()
-    {
-        rectTransform.SetParent(current.transform);
-        var rect = current.GetComponent<RectTransform>().rect;
-        rectTransform.localPosition = new Vector3(rect.xMin, rect.yMin / rect.height, 0);
-        rectTransform.SetAsLastSibling();
+        private void ResetPosition()
+        {
+            rectTransform.SetParent(current.transform);
+            var rect = current.GetComponent<RectTransform>().rect;
+            rectTransform.localPosition = new Vector3(rect.xMin, rect.yMin / rect.height, 0);
+            rectTransform.SetAsLastSibling();
+        }
     }
 }

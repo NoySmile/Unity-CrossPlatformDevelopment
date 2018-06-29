@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using UnityEngine.EventSystems;
-#if UNITY_UIEXTENSIONS
+﻿#if UNITY_UIEXTENSIONS
 using UnityEngine.UI.Extensions;
 
 

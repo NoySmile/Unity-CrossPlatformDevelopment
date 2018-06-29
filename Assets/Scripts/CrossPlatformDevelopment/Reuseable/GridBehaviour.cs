@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 #if UNITY_EDITOR
-using UnityEditor;
 
 #endif
-namespace Grid
+namespace CrossPlatformDevelopment.Reuseable
 {
     public class GridBehaviour : MonoBehaviour
     {

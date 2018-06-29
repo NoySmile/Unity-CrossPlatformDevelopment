@@ -1,13 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class InspectorReadOnlyAttribute : PropertyAttribute
+namespace CrossPlatformDevelopment.Attributes
 {
+    public class InspectorReadOnlyAttribute : PropertyAttribute
+    {
     
-}
-
-public class ItemFactoryAttribute : PropertyAttribute
-{
-    
+    }
 }

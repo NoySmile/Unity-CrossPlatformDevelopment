@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 
-public class QuitGame : MonoBehaviour
+namespace CrossPlatformDevelopment.Reuseable
 {
-    public void ExitGame()
+    public class QuitGame : MonoBehaviour
     {
-        Application.Quit();
+        public void ExitGame()
+        {
+            Application.Quit();
+        }
     }
 }
